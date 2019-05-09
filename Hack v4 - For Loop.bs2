@@ -1,0 +1,38 @@
+'{$STAMP BS2}
+'{$PBASIC 2.5}
+
+pincode1 CON 1
+pincode2 CON 2
+pincode3 CON 3
+pincode4 CON 4
+
+code1 VAR NIB
+code2 VAR NIB
+code3 VAR NIB
+code4 VAR NIB
+
+FOR code1 = 1 TO 4
+	IF code1 = pincode1 THEN 
+		DEBUG DEC ? code1
+ENDIF
+NEXT 
+
+FOR code2 = 1 TO 4
+	IF code2 = pincode2 THEN 
+		DEBUG DEC ? code2
+ENDIF
+NEXT 
+
+FOR code3 = 1 TO 4
+	IF code3 = pincode3 THEN 
+		DEBUG DEC ? code3
+ENDIF
+NEXT 
+
+FOR code4 = 1 TO 4
+	IF code4 = pincode4 THEN 
+		DEBUG DEC ? code4
+ENDIF
+NEXT 
+
+

@@ -1,0 +1,43 @@
+'{$STAMP BS2}
+'{$PBASIC 2.5}
+
+pincode1 VAR BIT
+pincode2 VAR BIT
+pincode3 VAR BIT
+pincode4 VAR BIT
+
+pincode1 = 1
+pincode2 = 2
+pincode3 = 3
+pincode4 = 4
+
+Code1 CON 1234
+Code2 CON 1243
+Code3 CON 1324
+Code4 CON 1342
+Code5 CON 1423
+Code6 CON 1432
+Code7 CON 2134
+Code8 CON 2143
+Code9 CON 2314
+Code10 CON 2341
+Code11 CON 2413
+Code12 CON 2431
+Code13 CON 3124
+Code14 CON 3142
+Code15 CON 3214
+Code16 CON 3241
+Code17 CON 3412
+Code18 CON 3421
+Code19 CON 4123
+Code20 CON 4132
+Code21 CON 4213
+Code22 CON 4231
+Code23 CON 4312
+Code24 CON 4321
+
+IF Code1 = pincode1 AND pincode2 AND pincode3 AND pincode4 THEN
+	DEBUG "Bank Unloked"
+ELSEIF Code1 <> pincode1 AND pincode2 AND pincode3 AND pincode4 THEN
+	DEBUG "Bank locked"
+ENDIF

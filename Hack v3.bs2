@@ -1,0 +1,129 @@
+'{$STAMP BS2}
+'{$PBASIC 2.5}
+
+pincode1 VAR NIB
+pincode2 VAR NIB
+pincode3 VAR NIB
+pincode4 VAR NIB
+
+pincode1 = 4
+pincode2 = 3
+pincode3 = 2
+pincode4 = 1
+
+code1 VAR NIB
+code2 VAR NIB
+code3 VAR NIB
+code4 VAR NIB
+
+
+code1 = 1
+code2 = 2
+code3 = 3
+code4 = 4
+
+final1 VAR NIB 
+	final12 VAR NIB
+		final13 VAR NIB
+			final14 VAR NIB
+
+final2 VAR NIB
+	final22 VAR NIB
+		final23 VAR NIB
+			final24 VAR NIB
+
+final3 VAR NIB
+	final32 VAR NIB
+		final33 VAR NIB
+			final34 VAR NIB
+
+final4 VAR NIB
+	final42 VAR NIB
+		final43 VAR NIB
+			final44 VAR NIB 
+
+
+DEBUG "Checking Code 1"			'Checking for pincode1
+
+	IF code1 = pincode1 THEN
+		final1 = code1
+			ELSEIF code1 <> pincode1 THEN
+	IF code2 = pincode1 THEN
+		final12 = code2
+			ELSEIF code2 <> pincode1 THEN 
+	IF code3 = pincode1 THEN
+		final13 = code3
+			ELSEIF code3 <> pincode1 THEN 
+	IF code4 = pincode1 THEN
+		final14= code4
+
+ENDIF 
+ENDIF
+ENDIF
+ENDIF
+
+DEBUG "Code 1 Found"
+
+DEBUG "Checking Code 2"
+
+
+	IF code1 = pincode2 THEN		'Checking for pincode2
+		final2 = code1
+			ELSEIF code1 <> pincode2 THEN
+	IF code2 = pincode2 THEN
+		final22 = code2
+			ELSEIF code2 <> pincode2 THEN 
+	IF code3 = pincode2 THEN
+		final23 = code3
+			ELSEIF code3 <> pincode2 THEN 
+	IF code4 = pincode2 THEN
+		final24 = code4
+ENDIF 
+ENDIF
+ENDIF
+ENDIF
+
+DEBUG "Code 2 Found"
+
+DEBUG "Checking Code 3"
+
+
+	IF code1 = pincode3 THEN		'Checking for pincode3
+		final3 = code1
+			ELSEIF code1 <> pincode3 THEN
+	IF code2 = pincode3 THEN
+		final32 = code2
+			ELSEIF code2 <> pincode3 THEN 
+	IF code3 = pincode3 THEN
+		final33 = code3
+			ELSEIF code3 <> pincode3 THEN 
+	IF code4 = pincode3 THEN
+		final34 = code4
+ENDIF 
+ENDIF
+ENDIF
+ENDIF
+
+DEBUG "Code 3 Found"
+
+DEBUG "Checking Code 4"
+
+	IF code1 = pincode4 THEN		'Checking for pincode4
+		final4 = code1
+			ELSEIF code1 <> pincode4 THEN
+	IF code2 = pincode4 THEN
+		final42 = code2
+			ELSEIF code2 <> pincode4 THEN 
+	IF code3 = pincode4 THEN
+		final43 = code3
+			ELSEIF code3 <> pincode4 THEN 
+	IF code4 = pincode4 THEN
+		final44 = code4
+ENDIF 
+ENDIF
+ENDIF
+ENDIF
+
+DEBUG "Code 4 Found"
+
+

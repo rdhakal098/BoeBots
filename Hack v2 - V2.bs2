@@ -1,0 +1,128 @@
+'{$STAMP BS2}
+'{$PBASIC 2.5}
+
+pincode1 VAR BIT
+pincode2 VAR BIT
+pincode3 VAR BIT
+pincode4 VAR BIT
+
+pincode1 = 4
+pincode2 = 3
+pincode3 = 2
+pincode4 = 1
+
+code1 VAR BIT
+code2 VAR BIT
+code3 VAR BIT
+code4 VAR BIT
+
+
+code1 = 1
+code2 = 2
+code3 = 3
+code4 = 4
+
+final1 VAR BIT 
+final2 VAR BIT
+final3 VAR BIT
+final4 VAR BIT 
+
+DO
+
+DEBUG "Checking Code 1"			'Checking for pincode1
+
+	IF code1 = pincode1 THEN
+		code1 = final1
+ELSEIF code1 <> pincode1 THEN
+	IF code2 = pincode1 THEN
+		code2 = final1
+ELSEIF code2 <> pincode1 THEN 
+	IF code3 = pincode1 THEN
+		code3 = final1
+ELSEIF code3 <> pincode1 THEN 
+	IF code4 = pincode1 THEN
+		code4 = final1
+
+ENDIF 
+ENDIF
+ENDIF
+ENDIF
+
+DEBUG "Code 1 Found"
+
+DEBUG "Checking Code 2"
+
+
+	IF code1 = pincode2 THEN		'Checking for pincode2
+		code1 = final2
+ELSEIF code1 <> pincode2 THEN
+	IF code2 = pincode2 THEN
+		code2 = final2
+ELSEIF code2 <> pincode2 THEN 
+	IF code3 = pincode2 THEN
+		code3 = final2
+ELSEIF code3 <> pincode2 THEN 
+	IF code4 = pincode2 THEN
+		code4 = final2
+ENDIF 
+ENDIF
+ENDIF
+ENDIF
+
+DEBUG "Code 2 Found"
+
+DEBUG "Checking Code 3"
+
+
+	IF code1 = pincode3 THEN		'Checking for pincode3
+		code1 = final3
+ELSEIF code1 <> pincode3 THEN
+	IF code2 = pincode3 THEN
+		code2 = final3
+ELSEIF code2 <> pincode3 THEN 
+	IF code3 = pincode3 THEN
+		code3 = final3
+ELSEIF code3 <> pincode3 THEN 
+	IF code4 = pincode3 THEN
+		code4 = final3
+ENDIF 
+ENDIF
+ENDIF
+ENDIF
+
+DEBUG "Code 3 Found"
+
+DEBUG "Checking Code 4"
+
+	IF code1 = pincode4 THEN		'Checking for pincode4
+		code1 = final4
+ELSEIF code1 <> pincode4 THEN
+	IF code2 = pincode4 THEN
+		code2 = final4
+ELSEIF code2 <> pincode4 THEN 
+	IF code3 = pincode4 THEN
+		code3 = final4
+ELSEIF code3 <> pincode4 THEN 
+	IF code4 = pincode4 THEN
+		code4 = final4
+ENDIF 
+ENDIF
+ENDIF
+ENDIF
+
+DEBUG "Code 4 Found"
+
+
+IF final1 = pincode1 AND final2 = pincode2 AND final3 = pincode3 AND final4 = pincode4 THEN
+
+DEBUG "Bank Hacked:", CR
+DEBUG final1, CR
+DEBUG final2, CR
+DEBUG final3, CR
+DEBUG final4, CR
+
+RETURN
+ENDIF
+
+LOOP
+
